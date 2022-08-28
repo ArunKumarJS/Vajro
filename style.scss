@@ -1,0 +1,510 @@
+@import url('http://fonts.cdnfonts.com/css/facebook-sans');
+
+$primary-bg: linear-gradient(283.85deg, #310157 3.04%, #583077 100%);
+$secondary-color: #F62369;
+$text-color: #ffffff;
+$dark-text: #212529;
+$section-head: 3.8rem;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Facebook Sans', sans-serif;
+    font-size: 10px;
+}
+
+body{
+    position: relative;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: $text-color;
+}
+
+.main-bg{
+    background: $primary-bg;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav-btn{
+    background-color: $secondary-color;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+}
+
+header{
+    position: relative;
+    z-index: 100;
+    .nav-bar{
+        width: 90%;
+        height: 10rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+main{
+    position: relative;
+    z-index: 999;
+}
+
+// Banner Section
+
+.banner-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    z-index: 999;
+    min-height: calc(100vh - 100px);
+    .banner-content{
+        flex-basis: 50%;
+        position: relative;
+        &::before{
+            content: "";
+            background: url(../../assets/images/section-bg.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        h1{
+            color: $text-color;
+            font-size: 4rem;
+            line-height: 64px;;
+        }
+        .sub-desc{
+            margin-top: 2rem;
+            color: $text-color;
+            font-size: 1.6rem;
+            width: 65%;
+            p{
+                font-size: inherit;
+            }
+            ul{
+                margin-top: 2rem;
+                li{
+                    margin-top: 1.8rem;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    line-height: 2.4rem;
+                    list-style: none;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    svg{
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .banner-form{
+        flex-basis: 40%;
+        background: linear-gradient(204.07deg, #583077 -49.04%, #310157 100%);
+        border-radius: 30px;
+        padding: 4rem;
+        h2{
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 42px;
+            color: $text-color;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            color: $text-color;
+
+            input{
+                flex-grow: 1;
+                display: block;
+                padding: 1.2rem 2.4rem;
+                background: #FFFFFF;
+                border-radius: 15px;
+                margin-top: 2rem;
+                outline: none;
+                border: none;
+                font-size: 1.6rem;
+            }
+            textarea{
+                background: #FFFFFF;
+                border-radius: 15px;
+                margin-top: 2rem;
+                padding: 1.2rem 2.4rem;
+                font-size: 1.6rem;
+            }
+            .form-desc{
+                color: $text-color;
+                font-size: 1.2rem;
+                margin-top: 2rem;
+            }
+            .sec-btn{
+                background-color: $secondary-color;
+                padding: 1rem 2rem;
+                font-size: 1.6rem;
+                border-radius: 1.5rem;
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                margin-top: 2rem;
+                i{
+                    background: url(../../assets/images/arrow.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    display: block;
+                    height: 1.5rem;
+                    margin-left: 1.1875rem;
+                    position: relative;
+                    width: 1.5rem;
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+}
+
+// Customer  Section
+
+.customer-section{
+    position: relative;
+    margin-top: 2rem;
+    text-align: center;
+    h2{
+        color: $dark-text;
+        font-size: $section-head;
+        span{
+            color: $secondary-color;
+            font-size: inherit;
+        }
+    }
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 90%;
+        margin: 2rem auto;
+        li{
+            list-style: none;
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+// Vajro Offer
+
+.vajro-offer{
+    background: $primary-bg;
+    min-height: 100vh;
+    .offer-container{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10rem;
+        .offer-col1{
+            align-self: flex-start;
+            flex-basis: 40%;
+            h2{
+                color: $text-color;
+                font-size: $section-head;
+                span{
+                    font-size: inherit;
+                    color: $secondary-color;
+                }
+            }
+        }
+        .offer-col2{
+            flex-basis: 40%;
+            background: linear-gradient(45deg, #310157 0.72%, #583077 100%);
+
+        }
+    }
+}
+
+
+
+// Swiper CSS
+
+.padding-container{
+    padding-left: 60px;
+    overflow: hidden;
+    margin-left: -60px;
+    margin-top: 3rem;
+    position: relative;
+    .shadow-bg{
+        position: absolute;
+        height: 350px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        // background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 76.49%);
+        z-index: 999 !important;
+    }
+    .swiper-container{
+        position: relative;
+        height: 500px;
+        // overflow: hidden;
+    }
+    
+    .swiper {
+        width: 100%;
+        height: 100px;
+    }
+    
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #583077;
+        height: fit-content !important;
+        margin-bottom: 4rem !important;
+    
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem 2rem 2rem 6rem !important;
+        .content-slide{
+            text-align: left;
+            h4{
+                color: #FFFFFF;
+                font-size: 3.2rem;
+                margin-bottom: 2rem;
+            }
+            p{
+                font-size: 1.6rem;
+                color: #ffffff;
+            }
+            svg{
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                left: -10%;
+            }
+        }
+    }
+}
+
+
+
+// Vajro Work
+
+.vajro-work{
+    margin: 4rem auto;
+    width: 90%;
+    h2{
+        color: $dark-text;
+        font-size: $section-head;
+        text-align: center;
+        span{
+            color: $secondary-color;
+            font-size: inherit;
+        }
+    }
+    .work-desc{
+        color: #212529;
+        font-size: 2.4rem;
+        text-align: center;
+        width: 60%;
+        margin: 2rem auto;
+    }
+    .work-container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 6rem;
+        .container-item{
+            width: 44%;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: flex-start;
+            .img-box{
+                align-self: center;
+                svg{
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+            .container-desc{
+                padding-left: 2rem;
+                h3{
+                    font-size: 3rem;
+                    color: $dark-text;
+                }
+                p{
+                    font-size: 1.6rem;
+                    color: $dark-text;
+                    margin-top: 2.4rem;
+                }
+            }
+        }
+    }
+}
+
+// Intergration
+
+.integrations-section{
+    margin: 4rem auto;
+    width: 90%;
+    h2{
+        color: $dark-text;
+        font-size: $section-head;
+        text-align: center;
+        span{
+            color: $secondary-color;
+            font-size: inherit;
+        }
+    }
+    p{
+        color: #212529;
+        font-size: 2.4rem;
+        text-align: center;
+        width: 60%;
+        margin: 2rem auto;
+    }
+    .img-inter{
+        margin: 4rem 0 8rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+// Ad-Banner
+
+.ad-banner{
+    min-height: 40vh;
+    margin: 5rem 0;
+    background: $primary-bg;
+    .banner-desc{
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 90%;
+        margin: auto;
+        img{
+            max-width: 100%;
+        }
+        h3{
+            color: #ffffff;
+            font-size: 4.8rem;
+            margin: 3rem 0;
+        }
+    }
+}
+
+
+// Footer Section
+
+footer{
+    .footer-container{
+        padding: 50px 50px;
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        h4{
+            font-size: 2.4rem;
+            margin-bottom: 2rem;
+        }
+        ul{
+            li{
+                list-style: none;
+            }
+        }
+
+
+        .foot-col1{
+            flex-basis: 33.3%;
+            .social-wrap{
+                margin-top: 4rem;
+                h4{
+                    margin-bottom: 1.5rem;
+                }
+                .social-links{
+                    display: flex;
+                    li{
+                        background-color: $secondary-color;
+                        padding: 1rem;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 2rem;
+                        svg{
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+        .foot-col2{
+            flex-basis: 33.3%;
+            .link-text{
+                a{
+                    font-size: 1.6rem;
+                    margin-bottom: 1rem;
+                    color: #212529;
+                    display: block;
+                }
+            }
+        }
+        .foot-col3{
+            flex-basis: 33.3%;
+            .country{
+                font-weight: 700;
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+            }
+            .address{
+                font-size: 1.6rem;
+                margin-bottom: 1.5rem;
+                line-height: 2.4rem;
+                width: 80%;
+            }
+        }
+        .foot-col4{
+            flex-basis: 33.3%;
+
+            a{
+                font-size: 1.6rem;
+                color: $dark-text;
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+
+// Testimonal Swiper
+
+.testimonal{
+
+}
